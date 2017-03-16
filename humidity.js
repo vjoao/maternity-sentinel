@@ -5,20 +5,26 @@ var options = {
 matrix.init('humidity', options).then(function(data){
 	if(data.value<=12){
 		matrix.led({
-			 arc: 180,
+			 arc: 90,
 			color: 'red',
 			start: 19
 		}).render();
 	}else if(data.value<=20){
 		matrix.led({
-			 arc: 180,
+			 arc: 90,
 			color: 'orange',
 			start: 19
 		}).render();
 	} else if (data.value<=30){
 		matrix.led({
-			 arc: 180,
+			 arc: 90,
 			color: 'yellow',
+			start: 19
+		}).render();	
+	} else {
+		matrix.led({
+			 arc: 90,
+			color: 'green',
 			start: 19
 		}).render();	
 	}

@@ -3,10 +3,14 @@ configVersion: 2
 
 description: App to verify babies conditions on maternities.
 keywords: 'face, temperature, humidity, leds, push'
-name: maternitySentinel
+name: maternity-sentinel
 displayName: Maternity Sentinel
 
 services:
-  maternitySentinel:
+  maternity-sentinel:
     engine: detection
     type: demographics
+
+sensors:
+  - temperature
+  - humidity

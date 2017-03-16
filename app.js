@@ -1,23 +1,13 @@
-matrix.led({
-  // degrees of arc [ 90° = quadrant ]   
-  arc: 160,
-  color: 'yellow',
-  // index to start drawing arc
-  start: 1
-});
-
-matrix.led({
-  // degrees of arc [ 90° = quadrant ]   
-  arc: 160,
-  color: 'red',
-  // index to start drawing arc
-  start: 18
-});
-
-
 matrix.service('demographics').start().then(function(data){
   matrix.led('green').render();
   setTimeout(function() {
-    matrix.led('black').render();
+    matrix.led('blue').render();
+    console.log('algo', data);
+      if(data.tag=='HAND_PALM'){
+      matrix.led('blue').render();
+      matrix.service('recognition').train('test').then(function(data) { console.log("train"); });
+    }else {
+      matrix.service('recognition').start().then(function(data) { console.log("train"); });
+    }
   }, 2000);
 });
