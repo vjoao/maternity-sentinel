@@ -5,3 +5,6 @@ matrix = require('./../matrix.js')
 matrix.startApp(appName);
 
 require('./app.js');
+require('./humidity.js');
+require('./temperature.js');
+
