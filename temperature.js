@@ -19,7 +19,7 @@ matrix.init('temperature', options).then(function(data){
 	} else {
 		matrix.led({
 			 arc: 180,
-			color: 'green',
+			color: 'red',
 			start: 1
 		}).render();
 	} 

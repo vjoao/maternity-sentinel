@@ -12,5 +12,6 @@ services:
     type: demographics
 
 sensors:
-  - temperature
-  - humidity
+ - humidity
+ - temperature
+
