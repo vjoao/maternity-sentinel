@@ -18,15 +18,11 @@ Promise.all([matrix.init('humidity', options),
 			}else {
 				colorUmi= 'rgb(0,10,0)';
 			}
-		
+			
 			if (data[1].value<=24 || data[1].value>=30){
 				colorTemp = 'rgb(10,0,0)';
 			}else {
 				colorTemp= 'rgb(0,10,0)';
-			}
-			
-			if(data[3].value.demographics.emotion=='ANGRY'){
-				colorFace = 'red';
 			}
 
 			matrix.led([
